@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Particle Physics</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar">
+			<a href="#" class="logo"><img src="Rimberio__1_-removebg-preview.png" alt="Logo"
+					style="height: 70px; width: 70px;"></a>
+			<ul class="menu-links">
+				<li id="home"><a href="homepage (2).html">Home</a></li>
+				<li>
+					<a id="More" href="#">About</a>
+					<ul id="submenu">
+						<li><a href="definition.html">Definition and <span>History</span></a></li>
+						<li><a href="standardmodel.html">The Standard <span>Model</span></a></li>
+					</ul>
+				</li>
+				<li id="quiz"><a href="quiz.html">Quiz</a></li>
+				<li><a id="connect" href="getconnected.html">Get Connected</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero-section">
+		<div class="content">
+			<h1>Particle Physics</h1>
+			<p>Investigating the Fundamental Properties of the Universe.</p>
+			<button onclick="direct()">Learn More</button>
+		</div>
+	</section>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "Poppins", sans-serif;
+		}
+
+		body {
+			height: 100vh;
+			background: url("why-are-scientists-searching-outside-the-standard-model-of-particle-physics.jpg");
+			background-position: center;
+			background-size: cover;
+		}
+
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px;
+		}
+
+		header .navbar {
+			display: flex;
+			align-items: center;
+			max-width: 1250px;
+			margin: 0 auto;
+			justify-content: space-between;
+		}
+
+		header .navbar .logo {
+			margin-right: 400px;
+		}
+
+		.navbar .menu-links {
+			display: flex;
+			gap: 40px;
+			list-style-type: none;
+		}
+
+		.navbar .menu-links li {
+			position: relative;
+		}
+
+		.navbar .menu-links li a:hover {
+			color: black;
+			background: white;
+		}
+
+		.navbar a {
+			color: #fff;
+			text-decoration: none;
+			transition: 0.2s ease;
+		}
+
+		/* DROP DOWN STARTS HERE */
+
+		#submenu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: #fff;
+			width: 150px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			list-style-type: none;
+		}
+
+		#submenu li a {
+			color: black;
+			margin: 10px;
+		}
+
+		#submenu li {
+			padding: 10px;
+		}
+
+		#submenu li:hover {
+			background-color: rgba(0, 0, 0, 0.3);
+			transition: 0.2s ease;
+		}
+
+		#submenu li a:hover {
+			background-color: rgba(0, 0, 0, 0);
+			transition: 0.2s ease;
+		}
+
+		/* DROP DOWN ENDS HERE */
+		.navbar .menu-links li:hover #submenu {
+			display: block;
+		}
+
+		.navbar .menu-links li a span {
+			padding-left: 10px;
+		}
+
+		.hero-section {
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+		}
+
+		.hero-section .content {
+			color: #fff;
+			max-width: 1250px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.hero-section .content h1 {
+			font-size: 77px;
+			max-width: 600px;
+		}
+
+		.hero-section .content p {
+			font-weight: bold;
+			margin-top: 15px;
+			max-width: 600px;
+			font-size: 20px;
+		}
+
+		.hero-section .content button {
+			background: #fff;
+			outline: none;
+			border: none;
+			font-size: 15px;
+			font-weight: 500;
+			margin-top: 25px;
+			padding: 10px 25px;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: 0.2s ease;
+		}
+
+		.hero-section .content button:hover {
+			color: #fff;
+			background: #06525c;
+		}
+	</style>
+
+	<script>
+		function direct() {
+			window.location.href = "definition.html";
+		}
+	</script>
+</body>
+
+</html>

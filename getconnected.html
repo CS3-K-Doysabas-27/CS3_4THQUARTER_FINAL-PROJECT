@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body onload="checkLoad()">
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="Rimberio__1_-removebg-preview.png" alt="Logo"
+                    style="height: 70px; width: 70px;"></a>
+            <ul class="menu-links">
+                <li><a href="homepage (2).html">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul id="submenu">
+                        <li><a href="definition.html">Definition and <span>History</span></a></li>
+                        <li><a href="standardmodel.html">The Standard <span>Model</span></a></li>
+                        
+                    </ul>
+                </li>
+                <li  id ="quiz"><a href="quiz.html">Quiz</a></li>
+                <li><a href="getconnected.html">Get Connected</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="myForm" class="login" onsubmit="submitForm(event)">
+        <fieldset>
+            <legend>Sign up</legend>
+            <label class="label" for="name">Name:</label> <br>
+            <input class="input" type="text" id="name" name="userName" placeholder="Your name" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+            <br>
+            <label class="label" for="userName">Username:</label> <br>
+            <input class="input" type="text" id="userName" name="name" placeholder="Username" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+            <br>
+            <label class="label" for="password">Password: </label> <br>
+            <input class="input" type="password" id="pWord" name="password" placeholder="Password" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+            <input class="input" type="password" id="cpWord" name="confirmPassword" placeholder="Confirm Password" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+            
+            <button class="confirm" type="button" onclick="confirmPass()">Confirm password</button><br>
+
+            <label class="label" for="email">Email: </label> <br>
+            <input class="input" type="email" id="email" name="email" placeholder="Your email" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+            <br>
+            <label class="label" for="address">Address: </label> <br>
+            <textarea class="input" id="address" name="address" rows="2" placeholder="Your Address" onblur="blurFunction(this)" onfocus="focusFunction(this)"></textarea>
+            <br>
+           
+            <input class="button" type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: url("why-are-scientists-searching-outside-the-standard-model-of-particle-physics.jpg");
+        background-position: center;
+        background-size: cover;
+      
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    header .navbar {
+        display: flex;
+        align-items: center;
+        max-width: 1250px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    header .navbar .logo {
+        margin-right: 400px;
+    }
+
+    .navbar .menu-links {
+        display: flex;
+        gap: 40px;
+        list-style-type: none;
+    }
+
+    .navbar .menu-links li {
+        position: relative;
+    }
+    .navbar .menu-links li a:hover {
+        color: black;
+        background: white;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+
+    #submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 150px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+    }
+
+    #submenu li a {
+        color: black;
+        margin: 10px;
+    }
+
+    #submenu li {
+        padding: 10px;
+    }
+
+    #submenu li:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: 0.2s ease;
+    }
+    #submenu li a:hover {
+        background-color: rgba(0, 0, 0, 0);
+        transition: 0.2s ease;
+    }
+    .navbar .menu-links li:hover #submenu {
+        display: block;            
+    } 
+    .navbar .menu-links li a span {
+			padding-left: 10px;
+		}  
+    legend {
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+        color: #fff;
+        font-weight: bold;
+        
+    }
+    fieldset {
+        background-color: rgba(245, 245, 240, 0.7);
+        padding: 30px;
+        border-radius: 25px;
+        width: 450px;
+        padding: 20px;
+        margin: auto;
+        left: 50%;
+        margin-top: 130px;
+        position: fixed;
+        transform: translateX(-50%);
+    }
+    label {
+        text-align: left;
+        padding-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        text-align: justify;
+    }
+    textarea {
+        width: 100%;
+    }
+    
+    .confirm {
+        margin-top: 2px;
+    }
+    </style>
+    <script>
+        function blurFunction(input) {
+            if (input.value.trim() == "") {
+                input.style.border = "2px solid red";
+            }
+        }
+        function focusFunction(input) {
+            input.style.border = "2px solid green";
+        }
+        let firstLoad = true;
+
+        function checkLoad() {
+            if (firstLoad) {
+                text();
+                firstLoad = false;
+            }
+        }
+        function text() {
+            console.log("Sign up and get connected so I could contact you.");
+        }
+        function confirmPass() {
+            let x = document.getElementById("pWord").value;
+            let y = document.getElementById("cpWord").value;
+            if (x === "" || y === "") {
+                alert("Missing inputs.");
+            } else if (x === y) {
+                alert("Password confirmed.");
+            } else {
+                alert("Passwords must be the same.");
+            }
+        }
+        function submitForm(event) {
+            event.preventDefault(); 
+            let a = document.getElementById("name").value;
+            let b = document.getElementById("userName").value;
+            let c = document.getElementById("pWord").value;
+            let d = document.getElementById("cpWord").value;
+            let f = document.getElementById("email").value;
+            let g = document.getElementById("address").value;
+
+            if (a === "" || b === "" || c === "" || d === "" || f === "" || g === "") {
+                alert("Please fill up the missing inputs");
+                return;
+            }
+            
+            if (c !== d) {
+                alert("Passwords must be the same.");
+                return;
+            }
+
+            let formData = {
+                name: a,
+                username: b,
+                password: c,
+                confirmPassword: d,
+                email: f,
+                address: g
+            };
+
+            localStorage.setItem("formData", JSON.stringify(formData));
+            alert("Form submitted!");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+      
+

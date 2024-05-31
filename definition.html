@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body onload = "play()">
+        <div class="header">
+            <nav class="navbar">
+                <a href="#" class="logo"><img src="Rimberio__1_-removebg-preview.png" alt="Logo"
+                        style="height: 70px; width: 70px;"></a>
+                <ul class="menu-links">
+                    <li  id ="home"><a href="homepage (2).html">Home</a></li>
+                    <li>
+                        <a id = "More" href="#">About</a>
+                        <ul id="submenu">
+                            <li><a href="definition.html">Definition and <span>History</span></a></li>
+                            <li><a href="standardmodel.html">The Standard <span>Model</span></a></li>        
+                        </ul>
+                    </li>
+					<li  id ="quiz"><a href="quiz.html">Quiz</a></li>
+                    <li><a id = "connect" href="getconnected.html">Get Connected</a></li>
+				
+                </ul>
+            </nav>
+            <h1>Definition and History</h1>
+        </div>
+        <div class="content1">
+			<h1>What is Particle Physics?<h1>
+			<p>Particle physics is a branch of physics that studies the fundamental 
+				particles and forces that constitute matter and radiation.
+				These particles are extremely small pieces that build up the world around us. 
+				They are best described in the language of math: calculus, the imaginary number, 
+				and group theory (which describes symmetry). The field also studies combinations 
+				of elementary particles up to the scale of protons and neutrons, 
+				while the study of combination of protons and neutrons is called nuclear physics.</p>
+			
+			<img id = "img1" src = "GettyImages-475158089-57f676975f9b586c35f96dc5.jpg">
+		</div>
+		<div class = "clearfix"></div>
+		<div class = "content2">
+			<h1>History</h1>
+			<h4>How was it made?</h4>
+			<p id = "p1">The idea that all matter is fundamentally composed of elementary particles dates from at least the 6th century BC.
+				[1] In the 19th century, John Dalton, through his work on stoichiometry, concluded that each element of nature was composed of a single,
+				 unique type of particle.[2] The word atom, after the Greek word atomos meaning "indivisible", has since then denoted the smallest particle 
+				 of a chemical element, but physicists later discovered that atoms are not, in fact, the fundamental particles of nature, but are
+				  conglomerates of even smaller particles, such as the electron. The early 20th century explorations of nuclear physics and quantum 
+				  physics led to proofs of nuclear fission in 1939 by Lise Meitner (based on experiments by Otto Hahn), 
+				and nuclear fusion by Hans Bethe in that same year; both discoveries also led to the development of nuclear weapons.</p>
+				<img id = "img2" src = "cloud-chamber.png">
+			<p class = "p2">Throughout the 1950s and 1960s, a bewildering variety of particles was found in collisions
+				of particles from beams of increasingly high energy. It was referred to informally as the "particle zoo".
+				Important discoveries such as the CP violation by James Cronin and Val Fitch brought new questions to matter-antimatter 
+				imbalance.[3] After the formulation of the <span><a class = "highlight" href = "standardmodel.html">Standard Model</a></span> during the 1970s, physicists clarified the origin of the particle zoo. 
+				The large number of particles was explained as combinations of a (relatively) small number of more fundamental particles and
+				framed in the context of quantum field theories. This reclassification marked the beginning of modern 
+				particle physics.[4][5]</p>
+		</div>
+        <style>
+        * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "Poppins", sans-serif;
+		}
+
+		body {
+			margin: 0;
+            padding: 0;
+		}
+
+		.header {		
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px;
+            height: 100vh;
+			background: url("why-are-scientists-searching-outside-the-standard-model-of-particle-physics.jpg");
+			background-position: center;
+			background-size: cover;
+            
+		}
+
+		.header .navbar {
+			display: flex;
+			align-items: center;
+			max-width: 1250px;
+			margin: 0 auto;
+			justify-content: space-between;
+		}
+
+		.header .navbar .logo {
+			margin-right: 400px;
+		}
+
+		.navbar .menu-links {
+			display: flex;
+			gap: 40px;
+			list-style-type: none;
+		}
+
+		.navbar .menu-links li {
+			position: relative;
+		}
+		.navbar .menu-links li a span {
+			padding-left: 10px;
+		}
+		.navbar .menu-links li a:hover {
+			color: black;
+			background: white;		
+		}
+		.navbar .menu-links li a {
+			text-align: center;
+			
+		}
+		.navbar a {
+			color: #fff;
+			text-decoration: none;
+			transition: 0.2s ease;
+		}
+
+		/* DROP DOWN STARTS HERE */
+
+		#submenu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: #fff;
+			width: 150px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			list-style-type: none;
+		}
+
+		#submenu li a {
+			color: black;
+			margin: 10px;
+		}
+
+		#submenu li {
+			padding: 10px;
+		}
+
+		#submenu li:hover {
+			background-color: rgba(0, 0, 0, 0.3);
+			transition: 0.2s ease;
+			
+		}
+		#submenu li a:hover {
+			background-color: rgba(0, 0, 0, 0);
+			transition: 0.2s ease;
+		}
+		/* DROP DOWN ENDS HERE */
+		.navbar .menu-links li:hover #submenu {
+			display: block;
+			
+		}
+        .header h1 {
+            color: white;
+            padding-left: 50px;
+            display: flex;
+            padding-top: 50px;
+            font-size: 70px;
+			margin-top: 10%;
+            
+           
+        }
+        .title2  {
+            margin-top: 310px;
+            
+        }
+		.content1 {
+			margin: 20px;
+			margin-top: 30px;
+
+		}
+		.content1 h1 {
+			font-weight: bold;
+			font-size: 60px;
+		}
+		.content1 p {
+            padding-top: 10px;
+            font-size: 18px;
+            width: 50%;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+            float: left;
+			padding: 12px;
+        }
+
+        .content1 #img1 {
+            display: block;
+            height: 350px;
+            width: 45%;
+            float: right;
+            margin-right: 35px;
+			margin-top: 20px;
+			
+        }
+		.clearfix {
+			clear: both;
+		}
+		.content2 {
+			margin: 20px;
+		}
+		.content2 h1 {
+			font-weight: bold;
+			font-size: 50px;
+		}
+		.content2 h4 {
+			font-weight: bold;
+			font-size: 30px;
+		}
+		.content2 #p1 {
+            padding-top: 10px;
+            font-size: 18px;
+            width: 100%;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            float: left;
+			padding: 12px;
+        }
+		.content2 .p2 {
+			padding-top: 10px;
+            font-size: 18px;
+            width: 73%;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            float: right;
+			padding: 12px;
+
+		}
+		.content2 #img2 {
+			margin-left: 10px;
+		}
+		.content2 .p2 .highlight {
+            font-size: 18px;
+			color:black;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+		}
+		.content2 .p2 .highlight:hover {
+			color: blue;
+		}
+		
+        </style>
+		<script>
+			function play() {
+				alert("Have fun learning!");
+			}
+		</script>
+    </body>
+</html>
